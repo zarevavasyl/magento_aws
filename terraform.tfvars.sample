@@ -1,0 +1,43 @@
+# VPC cidr block
+vpc_cidr_block = "10.0.0.0/16"
+
+# Subnets cidr block. We will be using ALB and we need to have two subnets to configure it
+subnet_cidr_block = "10.0.10.0/24"
+subnet_cidr_block2 = "10.0.50.0/24"
+
+#Specify the region in which to deploy the infrastructure
+aws_region = "eu-central-1"
+
+#Prefix for the name of the created resources.
+env_prefix = "prod"
+
+#Specify the instance type for Magento and Varnish server.
+magento_instance_type = "t3.large"
+varnish_instance_type = "t2.micro"
+
+#Specify the path to the private and public keys. It is used to configure servers and to connect them further.
+public_key_location = "~/.ssh/id_rsa.pub"
+privat_key_location = "~/.ssh/id_rsa"
+
+#Specify the domain name
+domain_name = "mydomain.com"
+
+#Specify the Magento version. From 2.4.4. The project was tested on the version - 2.4.5-p1.
+magento_version = "2.4.5-p1"
+
+#Enter the keys from the Magento Marketplace to install Magento via Composer.
+repo_magento_username = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+repo_magento_password = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+
+#Set the parameters for the database
+dbname = "magetno_db"
+dbuser = "magetno_usr"
+dbpass = "magento_db_pass"
+
+#Set the options for Magento installation
+admin_firstname = "Admin Firstname"
+admin_lastname = "Admin Lastname"
+admin_email = "admin@gmail.com"
+admin_user = "admin"
+admin_password = "admin_pwd_123"
+backend_frontname = "admin"
